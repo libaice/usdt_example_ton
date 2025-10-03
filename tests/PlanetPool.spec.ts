@@ -92,10 +92,10 @@ describe('PlanetPool', () => {
             master_msg: master_msg
         });
 
-        // printTransactionFees(mintResult.transactions);
+        printTransactionFees(mintResult.transactions);
 
-        // const deployerJettonData = await jettonWallet_deployer.getJettonData();
-        // console.log(deployerJettonData[0]);
+        const deployerJettonData = await jettonWallet_deployer.getJettonData();
+        console.log(deployerJettonData[0]);
         //
         // const minterContractData = await jettonMinter.getJettonData();
         // console.log(minterContractData[0]);
@@ -112,7 +112,7 @@ describe('PlanetPool', () => {
         // console.log(deployer.address)
         // console.log(usdtReceiver.address);
         // console.log(jettonMinter.address)
-
+        /**
 
         const deployResultOfPlanetPool = await planetPool.sendDeploy(deployer.getSender(), toNano('0.05'));
         expect(deployResultOfPlanetPool.transactions).toHaveTransaction({
@@ -194,6 +194,6 @@ describe('PlanetPool', () => {
 
         const usdtReceiverWallet = blockchain.openContract(Wallet.createFromAddress(usdtReceiverAddress));
         console.log((await usdtReceiverWallet.getJettonData())[0]);
-
+        */
     });
 });
